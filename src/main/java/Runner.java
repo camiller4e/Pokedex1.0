@@ -3,6 +3,8 @@ import db.DBTrainer;
 import models.Pokemon;
 import models.Trainer;
 
+import java.util.List;
+
 public class Runner {
 
     public static void main(String[] args) {
@@ -29,6 +31,12 @@ public class Runner {
 
         Trainer trainer4 = new Trainer("Richard", "Badtrainer", 18);
         DBTrainer.save(trainer4);
+
+        Pokemon squirtle = DBPokemon.find(pokemon2.getId());
+
+        List<Pokemon> allPokemon = DBPokemon.getAll();
+
+
     }
 
 }
